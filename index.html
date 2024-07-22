@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Quest: Seletores</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Seletores</h1>
+    <p><strong>Seletores</strong> são palavras <em>padrões</em> que utilizamos no <strong>CSS</strong> para escolher
+        qual elemento vamos escolher para estilizar.</p>
+
+    <p>Podemos escolher qualquer <strong>seletor</strong>, inclusive a <strong>Tag</strong> <strong>HTML</strong>.</p>
+
+    <h2>Tag</h2>
+    <p>Para estilizar usando uma <strong>Tag</strong>:</p>
+    <p>nome-da-tag &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; estilo: valor; <br> &rcub;</p>
+
+    <h2>Class</h2>
+    <p>Para estilizar usando uma <strong>class</strong>:</p>
+    <p>.nome-da-class &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; estilo: valor; <br> &rcub;</p>
+
+    <h2>Todos os elementos</h2>
+    <p>Para mudar o <strong>margin</strong> e o <strong>padding</strong> de toda a página:</p>
+    <p>* &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; margin: valor; <br> &nbsp; &nbsp; &nbsp; &nbsp; padding: valor; <br>
+        &rcub;</p>
+
+    <h2>Duas ou mais class</h2>
+    <p class="paragrafo vermelho">Este primeiro parágrafo é vermelho:</p>
+    <p>.paragrafo.vermelho &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; color: red; <br> &rcub;</p>
+    <p class="paragrafo verde">Já este segundo parágrafo é verde:</p>
+    <p>.paragrafo.verde &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; color: green; <br> &rcub;</p>
+
+    <p>.paragrafo &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; font-weight: 700; <br> &rcub;</p>
+
+    <p>Assim estilizamos o <em>peso da fonte</em> dos dois parágrafos ao mesmo tempo, ficando somente a cor diferente.
+    </p>
+
+    <h2>Estilizando com vírgula</h2>
+    <p>Podemos estilizar dois elementos diferentes com a mesma regra, separando-os com uma <em>vírgula</em>.</p>
+    <p>.paragrafo, span &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; font-weight: 700; <br> &rcub;</p>
+    <p class="paragrafo-virgula">Parágrafo</p>
+    <span>Span</span>
+
+    <h2>Estilizando com class filha</h2>
+    <section class="class-pai">
+        <p class="class-filha">Este parágrafo é <em>filho</em> de uma <strong>section</strong></p>
+    </section>
+
+    <p>.class-pai .class-filha &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color:green; <br> &rcub;</p>
+
+    <h2>Estilizando com seletor > </h2>
+    <div>
+        <p>Também podemos estilizar vários elementos <em>filho</em> utilizando o elemento <em>pai</em> seguido do sinal de <strong>&gt;</strong></p>
+    </div>
+
+    <p class="sem-estilo">div <strong>&gt;</strong> p &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; color: green; <br> &rcub;</p>
+
+    <h2>Estilizando com seletor + </h2>
+    <div><strong>div</strong> para exemplificação.</div>
+    <p>Este parágrafo está localizado no <strong>HTML</strong>, após uma <strong>div</strong>.</p>
+
+    <p>div + p &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; color: green; <br> &rcub;</p>
+
+    <h2>Estilizando com atributo</h2>
+    <a href="/" target="_blank">Clique aqui</a>
+    <a href="/">Clique aqui</a>
+
+    <p>a[target=_blank] &lcub; <br> &nbsp; &nbsp; &nbsp; &nbsp; color: green; <br> &rcub;</p>
+
+    <p>Somente a <strong>Tag</strong> <strong>&lt;a&gt;</strong> que tem o <em>atributo</em> <em>target=_blank</em> receberá o estilo.</p>
+</body>
+
+</html>
